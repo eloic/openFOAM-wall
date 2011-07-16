@@ -25,6 +25,10 @@ boundaryField
     {
         type            zeroGradient;
     }
+    frontBack
+    {
+        type            zeroGradient;
+    }
     atmosphere
     {
         type            inletOutlet;

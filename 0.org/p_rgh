@@ -25,6 +25,11 @@ boundaryField
         type            buoyantPressure;
         value           uniform 0;
     }
+    frontBack
+    {
+        type            buoyantPressure;
+        value           uniform 0;
+    }
     atmosphere
     {
         type            totalPressure;

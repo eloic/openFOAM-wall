@@ -26,6 +26,11 @@ boundaryField
         type            fixedValue;
         value           uniform (0 0 0);
     }
+    frontBack
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
     atmosphere
     {
         type            fixedValue;
@@ -100,7 +105,7 @@ boundaryField
                 linearAxialAngularSpringCoeffs
                 {
                     axis            (1 0 0);
-                    stiffness       100;
+                    stiffness       10;
                     damping         0.5;
                     referenceOrientation (1 0 0 0 1 0 0 0 1); //$orientation;
                 }
