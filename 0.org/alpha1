@@ -27,7 +27,7 @@ boundaryField
     }
     frontBack
     {
-        type            zeroGradient;
+        type            symmetryPlane;
     }
     atmosphere
     {

@@ -28,8 +28,7 @@ boundaryField
     }
     frontBack
     {
-        type            fixedValue;
-        value           uniform (0 0 0);
+        type            symmetryPlane;
     }
     atmosphere
     {

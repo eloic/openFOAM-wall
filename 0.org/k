@@ -28,8 +28,7 @@ boundaryField
     }
     frontBack
     {
-        type            kqRWallFunction;
-        value           uniform 0.1;
+        type            symmetryPlane;
     }
     atmosphere
     {

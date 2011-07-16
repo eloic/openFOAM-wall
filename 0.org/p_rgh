@@ -27,8 +27,7 @@ boundaryField
     }
     frontBack
     {
-        type            buoyantPressure;
-        value           uniform 0;
+        type            symmetryPlane;
     }
     atmosphere
     {
