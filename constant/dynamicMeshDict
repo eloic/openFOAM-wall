@@ -15,11 +15,9 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 dynamicFvMesh     dynamicMotionSolverFvMesh;
-twoDMotion        yes; ///
 motionSolverLibs  ("libfvMotionSolvers.so");
 solver            displacementLaplacian;
 diffusivity       uniform; //inverseDistance (floatingObject);
-frozenDiffusion   off; ///
 
 /*
 dynamicFvMesh dynamicRefineFvMesh;

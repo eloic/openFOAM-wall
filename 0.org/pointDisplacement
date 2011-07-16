@@ -100,7 +100,7 @@ boundaryField
                 linearAxialAngularSpringCoeffs
                 {
                     axis            (1 0 0);
-                    stiffness       20;
+                    stiffness       100;
                     damping         0.5;
                     referenceOrientation (1 0 0 0 1 0 0 0 1); //$orientation;
                 }
