@@ -17,7 +17,7 @@ FoamFile
 dynamicFvMesh     dynamicMotionSolverFvMesh;
 motionSolverLibs  ("libfvMotionSolvers.so");
 solver            displacementLaplacian;
-diffusivity       uniform; //inverseDistance (floatingObject);
+diffusivity       inverseDistance (floatingObject);
 
 /*
 dynamicFvMesh dynamicRefineFvMesh;

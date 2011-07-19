@@ -22,15 +22,18 @@ defaultFieldValues
 
 regions
 (
+    /* // standing water
     boxToCell
     {
         box ( -100 -100 -100 ) ( 100 100 0.0 );
         fieldValues ( volScalarFieldValue alpha1 1 );
     }
+    */
 
+    // dambreak
     boxToCell
     {
-        box ( -100 -100 -100 ) ( 100 1 0.7 );
+        box ( -100 -100 -100 ) ( 100 1 0.25 );
         fieldValues ( volScalarFieldValue alpha1 1 );
     }
 );
