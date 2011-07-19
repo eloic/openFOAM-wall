@@ -20,26 +20,26 @@ FoamFile
     stationaryWalls
     {
         type            wall;
-        nFaces          296;
-        startFace       13152;
+        nFaces          346;
+        startFace       24565;
     }
     frontBack
     {
         type            symmetryPlane;
-        nFaces          5364;
-        startFace       13448;
+        nFaces          24880;
+        startFace       24911;
     }
     atmosphere
     {
         type            patch;
-        nFaces          180;
-        startFace       18812;
+        nFaces          250;
+        startFace       49791;
     }
     floatingObject
     {
         type            wall;
-        nFaces          40;
-        startFace       18992;
+        nFaces          34;
+        startFace       50041;
     }
 )
 

@@ -33,7 +33,7 @@ regions
     // dambreak
     boxToCell
     {
-        box ( -100 -100 -100 ) ( 100 1 0.25 );
+        box ( -100 -100 -100 ) ( 100 0 0.24 );
         fieldValues ( volScalarFieldValue alpha1 1 );
     }
 );
