@@ -9,4 +9,4 @@
 
 cd $PBS_O_WORKDIR
 echo "RUNNING ON: `/usr/bin/uniq $PBS_NODEFILE`"
-mpirun_jaws -np 8 interDyMFoam -parallel > $WORKDIR/flexible-wall/log
+mpirun_jaws -np 8 ./Allrun -parallel > $WORKDIR/flexible-wall/log
