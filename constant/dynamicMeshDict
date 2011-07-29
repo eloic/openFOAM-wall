@@ -19,28 +19,4 @@ motionSolverLibs  ("libfvMotionSolvers.so");
 solver            displacementLaplacian;
 diffusivity       inverseDistance (floatingObject);
 
-/*
-dynamicFvMesh dynamicRefineFvMesh;
-
-dynamicRefineFvMeshCoeffs
-{
-    refineInterval 1;
-    field alpha1;
-    lowerRefineLevel 0.001;
-    upperRefineLevel 0.999;
-    unrefineLevel 10;
-    nBufferLayers 1;
-    maxRefinement 2;
-    maxCells 200000;
-    correctFluxes
-    (
-        (
-            phi
-            U
-        )
-    );
-    dumpLevel true;
-}
-*/
-
 // ************************************************************************* //

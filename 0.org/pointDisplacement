@@ -38,7 +38,7 @@ boundaryField
     floatingObject
     {
         type            sixDoFRigidBodyDisplacement;
-        centreOfMass    (0.05 2.55 0.1);
+        centreOfMass    (0.05 4.55 0.1);
         momentOfInertia (0.0208 0.0208 0.004151515);
         mass            2.5;
         rhoInf          1;  // needed only for solvers solving for kinematic pressure
@@ -54,7 +54,7 @@ boundaryField
                 relaxationFactor 0.5;  //0.7
                 fixedPointCoeffs
                 {
-                    fixedPoint      (0.0 2.55 0.0);
+                    fixedPoint      (0.0 4.55 0.0);
                 }
             }
             fixedPoint2
@@ -64,7 +64,7 @@ boundaryField
                 relaxationFactor 0.5;  //0.7
                 fixedPointCoeffs
                 {
-                    fixedPoint      (0.1 2.55 0.0);
+                    fixedPoint      (0.1 4.55 0.0);
                 }
             }
             /*
