@@ -59,4 +59,22 @@ libs
     "libforces.so"
 );
 
+functions
+{
+  forces //name of folder
+  {
+    type forces;
+    functionObjectLibs ("libforces.so"); // Lib to load
+    patches (floatingObject); // change to your patch name
+    pName p;
+    Uname U;
+    rhoName rhoInf;
+    rhoInf 1000;
+    CofR (0.16 0 0); // Origin for moment calculations
+    outputControl timeStep;
+    outputInterval 1;
+  }
+}
+
+
 // ************************************************************************* //
