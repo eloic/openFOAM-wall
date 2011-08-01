@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.0.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       pointVectorField;
+    location    "0.01";
+    object      pointDisplacement;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 0 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    stationaryWalls
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    frontBack
+    {
+        type            symmetryPlane;
+    }
+    atmosphere
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    floatingObject
+    {
+        type            sixDoFRigidBodyDisplacement;
+        centreOfMass    (8.1 0.8 0.05);
+        momentOfInertia (2.57 0.05 2.6);
+        mass            12.0;
+        rhoInf          1;  // needed only for solvers solving for kinematic pressure
+        report          on;
+        value           uniform (0 0 0);
+        constraints
+        {
+            maxIterations   1000;
+            fixedPoint1
+            {
+                sixDoFRigidBodyMotionConstraint fixedPoint;
+                tolerance        1e-6; //1e-8
+                relaxationFactor 0.4;  //0.7
+                fixedPointCoeffs
+                {
+                    fixedPoint      (8.1 0 0);
+                }
+            }
+            fixedPoint2
+            {
+                sixDoFRigidBodyMotionConstraint fixedPoint;
+                tolerance        1e-6; //1e-8
+                relaxationFactor 0.4;  //0.7
+                fixedPointCoeffs
+                {
+                    fixedPoint      (8.1 0 0.1);
+                }
+            }
+            fixedPoint3
+            {
+                sixDoFRigidBodyMotionConstraint fixedPoint;
+                tolerance        1e-6; //1e-8
+                relaxationFactor 0.4;  //0.7
+                fixedPointCoeffs
+                {
+                    fixedPoint      (8.1 1.6 0.05);
+                }
+            }
+        }
+        
+        restraints
+        {
+            axialSpring1
+            {
+                sixDoFRigidBodyMotionRestraint linearAxialAngularSpring;
+
+                linearAxialAngularSpringCoeffs
+                {
+                    axis            (0 0 1);
+                    stiffness       100;
+                    damping         0.5;
+                    referenceOrientation (1 0 0 0 1 0 0 0 1); //$orientation;
+                }
+            }
+        }
+    }
+}
+
+
+// ************************************************************************* //
