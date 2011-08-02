@@ -38,8 +38,8 @@ boundaryField
     floatingObject
     {
         type            sixDoFRigidBodyDisplacement;
-        centreOfMass    (8.1 0.8 0.05);
-        momentOfInertia (2.57 0.05 2.6);
+        centreOfMass    (8.15 0.5 0.05);
+        momentOfInertia (1.01 0.1 1.09); // moment_x = (mass/12)*(length_y^2 + length_z^2)
         mass            12.0;
         rhoInf          1;  // needed only for solvers solving for kinematic pressure
         report          on;

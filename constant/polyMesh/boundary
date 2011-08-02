@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2.0.x                                 |
+|  \\    /   O peration     | Version:  2.0.0                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -20,26 +20,26 @@ FoamFile
     stationaryWalls
     {
         type            wall;
-        nFaces          356;
-        startFace       28212;
+        nFaces          466;
+        startFace       28104;
     }
     frontBack
     {
         type            symmetryPlane;
-        nFaces          28544;
-        startFace       28568;
+        nFaces          28560;
+        startFace       28570;
     }
     atmosphere
     {
         type            patch;
-        nFaces          240;
-        startFace       57112;
+        nFaces          400;
+        startFace       57130;
     }
     floatingObject
     {
         type            wall;
-        nFaces          68;
-        startFace       57352;
+        nFaces          46;
+        startFace       57530;
     }
 )
 
