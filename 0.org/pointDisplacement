@@ -40,7 +40,7 @@ boundaryField
         type            sixDoFRigidBodyDisplacement;
         centreOfMass    (8.15 0.5 0.05);
         momentOfInertia (1.01 0.1 1.09); // moment_x = (mass/12)*(length_y^2 + length_z^2)
-        mass            12.0;
+        mass            12;
         rhoInf          1;  // needed only for solvers solving for kinematic pressure
         report          on;
         value           uniform (0 0 0);
@@ -54,7 +54,7 @@ boundaryField
                 relaxationFactor 0.4;  //0.7
                 fixedPointCoeffs
                 {
-                    fixedPoint      (8.1 0 0);
+                    fixedPoint      (8.15 0 0);
                 }
             }
             fixedPoint2
@@ -64,7 +64,7 @@ boundaryField
                 relaxationFactor 0.4;  //0.7
                 fixedPointCoeffs
                 {
-                    fixedPoint      (8.1 0 0.1);
+                    fixedPoint      (8.15 0 0.1);
                 }
             }
 /*
@@ -90,7 +90,7 @@ boundaryField
                 linearAxialAngularSpringCoeffs
                 {
                     axis            (0 0 1);
-                    stiffness       100;
+                    stiffness       200;
                     damping         0.5;
                     referenceOrientation (1 0 0 0 1 0 0 0 1); //$orientation;
                 }

@@ -1,0 +1,3 @@
+#!/bin/sh
+cat log.interDyMFoam | grep angle > ff_angle
+python dirtywork.py
